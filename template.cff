@@ -1,0 +1,20 @@
+cff-version: 1.2.0
+title: nzilbb.converter
+message: 'If you use this software, please cite it as below.'
+type: software
+authors:
+  - given-names: Robert
+    family-names: Fromont
+    email: robert.fromont@canterbury.ac.nz
+    affiliation: 'NZILBB, University of Canterbury'
+    orcid: 'https://orcid.org/0000-0001-5271-5487'
+repository-code: 'https://github.com/nzilbb/converter/'
+url: 'https://github.com/nzilbb/converter/'
+abstract: >-
+  Utilities that convert from one linguistic annotation format to another
+  via annotation graphs.
+keywords:
+  - Annotation Graph
+  - Linguistic Annotation
+  - Linguistic Format
+license: AGPL-3.0-or-later

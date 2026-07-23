@@ -1,0 +1,7 @@
+*~
+# build jar files
+bin
+# maven target directory
+target
+# maven versions:set backup files
+*.versionsBackup
