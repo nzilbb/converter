@@ -1,6 +1,5 @@
 cff-version: 1.2.0
 title: nzilbb.converter
-message: 'If you use this software, please cite it as below.'
 type: software
 authors:
   - given-names: Robert
@@ -8,11 +7,58 @@ authors:
     email: robert.fromont@canterbury.ac.nz
     affiliation: 'NZILBB, University of Canterbury'
     orcid: 'https://orcid.org/0000-0001-5271-5487'
+publisher:
+  name: "New Zealand Institute of Language, Brain and Behaviour"
+institution:
+  name: "The University of Canterbury"
 repository-code: 'https://github.com/nzilbb/converter/'
-url: 'https://github.com/nzilbb/converter/'
-abstract: >-
+url: 'https://nzilbb.github.io/converter/'
+abstract: |
   Utilities that convert from one linguistic annotation format to another
   via annotation graphs.
+message: |
+  To use a particular converter, you need to have Java installed on your
+  system. Download the file, and double-click it to run.
+  
+  If double-clicking doesn't work, you can run the converter from the
+  command line, by entering:
+  
+  ```
+  java -jar vtt-to-textgrid.jar
+  ```
+
+  By default converters display a window on to which you can drag and drop files for
+  converting. However, they can also be run in 'batch mode', which allows you to
+  automatically convert a list of files from the command line - e.g.
+  
+  ```
+  java -jar trs-to-textgrid.jar --batchmode *.trs
+  ```
+  
+  Some conversions have configurable output, e.g.
+  
+  ```
+  java -jar trs-to-txt.jar *.trs
+  ```
+  
+  ...will include annotations and participant names in the output text files, but:
+  
+  ```
+  java -jar trs-to-txt.jar --textonly *.trs
+  ```
+  
+  ...produces text files that exclude all annotations and participant names.
+  
+  The `--usage` command-line switch prints information about command-line options.
+  
+  As many formats do not support the meta-data, annotation granularity or ontology of other
+  formats, many of these conversions necessarily entail loss of data. However, mappings are
+  made from one format to another wherever possible.
+  
+  For notes about specific correspondences or data losses, use the `--help` command-line
+  switch, or use the *Help|Information* menu option of the conversion utility concerned.
+programming-languages:
+  - java
 keywords:
   - Annotation Graph
   - Linguistic Annotation

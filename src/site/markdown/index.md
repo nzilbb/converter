@@ -1,5 +1,7 @@
 # Converters
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21501429.svg)](https://doi.org/10.5281/zenodo.21501429)
+
 These are standalone programs that convert transcripts from one tool format to another, e.g.
 
 * trs - [Transcriber](http://trans.sourceforge.net/en/presentation.php) transcripts
