@@ -18,3 +18,7 @@ keywords:
   - Linguistic Annotation
   - Linguistic Format
 license: AGPL-3.0-or-later
+identifiers:
+  - description: "nzilbb.converter Linguistic format converters."
+    type: doi
+    value: 10.5281/zenodo.21501428

@@ -12,6 +12,10 @@ repository-code: https://github.com/nzilbb/convrter/tree/main
 url: https://github.com/nzilbb/converter/
 abstract: Utilities that convert from one linguistic annotation format to another
   via annotation graphs.
+identifiers:
+  - description: "nzilbb.converter Linguistic format converters."
+    type: doi
+    value: 10.5281/zenodo.21501428
 keywords:
 - Annotation Graph
 - Linguistic Annotation
