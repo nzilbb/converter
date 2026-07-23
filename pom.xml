@@ -90,7 +90,7 @@
         <version>0.6.0</version>
         <configuration>
           <input>template.cff</input>
-          <output>${basedir}/../CITATION.cff</output>
+          <output>${basedir}/CITATION.cff</output>
         </configuration>
       </plugin>
     </plugins>
