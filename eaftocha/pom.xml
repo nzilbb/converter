@@ -4,12 +4,12 @@
   <parent>
     <artifactId>nzilbb.converter</artifactId>
     <groupId>nz.ilbb.ag</groupId>
-    <version>1.0.0</version>
+    <version>1.0.1</version>
   </parent>
 
   <groupId>nz.ilbb.ag</groupId>
   <artifactId>eaf-to-cha</artifactId>
-  <version>0.1.4</version>
+  <version>1.0.1</version>
   <name>nzilbb.converter.eaftocha</name>
   <description>ELAN file to CLAN CHAT transcript converter</description>
 
@@ -32,7 +32,7 @@
     <dependency>
       <groupId>nz.ilbb.ag</groupId>
       <artifactId>nzilbb.ag</artifactId>
-      <version>1.2.4</version>
+      <version>1.4.1</version>
     </dependency>
     <dependency>
       <groupId>nz.ilbb.ag</groupId>
@@ -141,7 +141,7 @@
                 <artifactItem>
                   <groupId>nz.ilbb.ag</groupId>
                   <artifactId>nzilbb.ag</artifactId>
-                  <version>1.2.4-SNAPSHOT</version>
+                  <version>1.4.1</version>
                   <outputDirectory>${project.build.directory}/classes</outputDirectory>
                 </artifactItem>
                 <artifactItem>

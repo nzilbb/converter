@@ -7,7 +7,11 @@ The resulting .tex files each include a definition for a new '	urn' command whic
 
 ## Deserializing from "WebVTT subtitles" text/vtt
 
-There are no configuration parameters for deserialization.
+Command-line configuration parameters for deserialization:
+
+|   |   |
+|:--|:--|
+| `--nonWordPattern=(\([0-9]+\.[0-9]+\))|([\p{Punct}&&[^_]])` | Regular expression to identify non-word characters for joining to a neighboring words e.g. (\([0-9]+\.[0-9]+\))|([\p{Punct}&&[^_]]) - set this blank to simply tokenize on spaces. |
 
 ## Serializing to "LaTeX Document" application/x-tex
 
@@ -17,7 +21,7 @@ Command-line configuration parameters for serialization:
 |:--|:--|
 | `--noiseLayer=`*Layer* | Background noises |
 | `--orthographyLayer=`*Layer* | Orthography |
-| `--texPreamble=`*String* | TeX code to include in the preamble, e.g. "\usepackage{lineno, blindtext}" |
-| `--texBeginTranscript=`*String* | TeX to insert before the first turn, e.g. "\begin{description}" |
-| `--texTurnCommand=`*String* | TeX command for formatting a speech turn, e.g. "\item[#1:] #2" - #1 = Speaker ID, #2 = Turn Text |
-| `--texEndTranscript=`*String* | TeX to insert after the last turn, e.g. "\end{description}" |
+| `--texPreamble=` | TeX code to include in the preamble, e.g. "\usepackage{lineno, blindtext}" |
+| `--texBeginTranscript=\begin{description}` | TeX to insert before the first turn, e.g. "\begin{description}" |
+| `--texTurnCommand=\item[#1:] #2` | TeX command for formatting a speech turn, e.g. "\item[#1:] #2" - #1 = Speaker ID, #2 = Turn Text |
+| `--texEndTranscript=\end{description}` | TeX to insert after the last turn, e.g. "\end{description}" |

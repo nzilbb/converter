@@ -11,20 +11,20 @@ Command-line configuration parameters for deserialization:
 |   |   |
 |:--|:--|
 | `--topicLayer=`*Layer* | Topic tags |
-| `--commentLayer=`*Layer* | Commentary |
+| `--commentLayer=comment` | Commentary |
 | `--noiseLayer=`*Layer* | Noise annotations |
 | `--languageLayer=`*Layer* | Inline language tags |
-| `--lexicalLayer=`*Layer* | Lexical tags |
-| `--pronounceLayer=`*Layer* | Manual pronunciation tags |
-| `--entityLayer=`*Layer* | Named entities |
+| `--lexicalLayer=lexical` | Lexical tags |
+| `--pronounceLayer=pronounce` | Manual pronunciation tags |
+| `--entityLayer=entity` | Named entities |
 | `--scribeLayer=`*Layer* | Name of transcriber |
 | `--versionLayer=`*Layer* | Version of transcriber |
 | `--versionDateLayer=`*Layer* | Version date of transcriber |
 | `--programLayer=`*Layer* | Name of the program recorded |
-| `--airDateLayer=`*Layer* | Date the program aired |
-| `--transcriptLanguageLayer=`*Layer* | The language of the whole transcript |
+| `--airDateLayer=transcript_recording_date` | Date the program aired |
+| `--transcriptLanguageLayer=transcript_language` | The language of the whole transcript |
 | `--participantCheckLayer=`*Layer* | Participant checked |
-| `--genderLayer=`*Layer* | Gender - participant 'type' |
+| `--genderLayer=participant_gender` | Gender - participant 'type' |
 | `--dialectLayer=`*Layer* | Participant's dialect |
 | `--accentLayer=`*Layer* | Participant's accent |
 | `--scopeLayer=`*Layer* | Participant's 'scope' |
@@ -36,7 +36,7 @@ Command-line configuration parameters for serialization:
 |   |   |
 |:--|:--|
 | `--cUnitLayer=`*Layer* | Layer for marking c-units |
-| `--tokenLayer=`*Layer* | Output word tokens come from this layer |
+| `--tokenLayer=word` | Output word tokens come from this layer |
 | `--disfluencyLayer=`*Layer* | Layer for disfluency annotations |
 | `--nonWordLayer=`*Layer* | Layer for non-word noises |
 | `--expansionLayer=`*Layer* | Layer for expansion annotations |
@@ -56,22 +56,22 @@ Command-line configuration parameters for serialization:
 | `--morGlossLayer=`*Layer* | Layer for English glosses in MOR tags |
 | `--gemLayer=`*Layer* | Layer for gems |
 | `--transcriberLayer=`*Layer* | Layer for transcriber name |
-| `--languagesLayer=`*Layer* | Layer for transcriber language |
-| `--dateLayer=`*Layer* | Layer for date of the interaction |
+| `--languagesLayer=transcript_language` | Layer for transcriber language |
+| `--dateLayer=transcript_recording_date` | Layer for date of the interaction |
 | `--locationLayer=`*Layer* | Layer for location of the interaction |
 | `--recordingQualityLayer=`*Layer* | Layer for recording quality |
 | `--roomLayoutLayer=`*Layer* | Layer for room layout |
 | `--tapeLocationLayer=`*Layer* | Layer for tape and location on the tape covered by the transcription |
-| `--targetParticipantLayer=`*Layer* | Layer for identifying target participants |
+| `--targetParticipantLayer=main_participant` | Layer for identifying target participants |
 | `--SESLayer=`*Layer* | Layer for SES |
 | `--roleLayer=`*Layer* | Layer for role |
 | `--educationLayer=`*Layer* | Layer for education |
-| `--sexLayer=`*Layer* | Layer for sex |
+| `--sexLayer=participant_gender` | Layer for sex |
 | `--customLayer=`*Layer* | Layer for custom |
 | `--corpusLayer=`*Layer* | Layer for corpus |
 | `--languageLayer=`*Layer* | Layer for language |
 | `--ageLayer=`*Layer* | Layer for age |
 | `--groupLayer=`*Layer* | Layer for group |
-| `--includeTimeCodes=`*Boolean* | Include utterance sychronization information when exporting transcripts |
-| `--splitMorTagGroups=`*Boolean* | Split alternative MOR taggings into separate annotations |
-| `--splitMorWordGroups=`*Boolean* | Split MOR word morphemes (clitics, components of compounds ) into separate annotations. This is only supported when Split MOR Tag Groups is also enabled. |
+| `--includeTimeCodes=true` | Include utterance sychronization information when exporting transcripts |
+| `--splitMorTagGroups=true` | Split alternative MOR taggings into separate annotations |
+| `--splitMorWordGroups=true` | Split MOR word morphemes (clitics, components of compounds ) into separate annotations. This is only supported when Split MOR Tag Groups is also enabled. |

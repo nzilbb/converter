@@ -24,18 +24,22 @@ Command-line configuration parameters for deserialization:
 
 |   |   |
 |:--|:--|
-| `--commentLayer=`*Layer* | Commentary |
-| `--noiseLayer=`*Layer* | Noise annotations |
-| `--lexicalLayer=`*Layer* | Lexical tags |
-| `--pronounceLayer=`*Layer* | Manual pronunciation tags |
+| `--commentLayer=comment` | Commentary |
+| `--noiseLayer=noise` | Noise annotations |
+| `--lexicalLayer=lexical` | Lexical tags |
+| `--pronounceLayer=pronounce` | Manual pronunciation tags |
 | `--authorLayer=`*Layer* | Name of transcriber |
 | `--dateLayer=`*Layer* | Document date |
 | `--languageLayer=`*Layer* | The language of the whole transcript |
 | `--phraseLanguageLayer=`*Layer* | For tagging individual phrases with a language |
-| `--useConventions=`*Boolean* | Whether to use text conventions for comment, noise, lexical, and pronounce annotations |
-| `--ignoreBlankAnnotations=`*Boolean* | Whether to skip annotations with no label, or process them |
-| `--minimumTurnPauseLength=`*Double* | Minimum amount of time between two turns by the same speaker, with no intervening speaker, for which the inter-turn pause counts as a turn change boundary. If the pause is shorter than this, the turns are merged into one. |
+| `--useConventions=false` | Whether to use text conventions for comment, noise, lexical, and pronounce annotations |
+| `--ignoreBlankAnnotations=true` | Whether to skip annotations with no label, or process them |
+| `--minimumTurnPauseLength=0.0` | Minimum amount of time between two turns by the same speaker, with no intervening speaker, for which the inter-turn pause counts as a turn change boundary. If the pause is shorter than this, the turns are merged into one. |
 
 ## Serializing to "WebVTT subtitles" text/vtt
 
-There are no configuration parameters for serialization.
+Command-line configuration parameters for serialization:
+
+|   |   |
+|:--|:--|
+| `--nonWordPattern=(\([0-9]+\.[0-9]+\))|([\p{Punct}&&[^_]])` | Regular expression to identify non-word characters for joining to a neighboring words e.g. (\([0-9]+\.[0-9]+\))|([\p{Punct}&&[^_]]) - set this blank to simply tokenize on spaces. |

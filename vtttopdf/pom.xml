@@ -4,12 +4,12 @@
   <parent>
     <artifactId>nzilbb.converter</artifactId>
     <groupId>nz.ilbb.ag</groupId>
-    <version>1.0.0</version>
+    <version>1.0.1</version>
   </parent>
 
   <groupId>nz.ilbb.ag</groupId>
   <artifactId>vtt-to-pdf</artifactId>
-  <version>0.1.4</version>
+  <version>1.0.1</version>
   <name>nzilbb.converter.vtttopdf</name>
   <description>WebVTT subtitles to PDF converter</description>
 
@@ -17,11 +17,11 @@
     
     <input.package>nzilbb.formatter.webvtt</input.package>
     <input.path>nzilbb/formatter/webvtt/</input.path>
-    <input.version>0.7.2</input.version>
+    <input.version>1.1.1</input.version>
     
     <output.package>nzilbb.formatter.pdf</output.package>
     <output.path>nzilbb/formatter/pdf/</output.path>
-    <output.version>0.5.2</output.version>    
+    <output.version>0.5.3</output.version>    
 
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <maven.compiler.source>1.8</maven.compiler.source>
@@ -32,7 +32,7 @@
     <dependency>
       <groupId>nz.ilbb.ag</groupId>
       <artifactId>nzilbb.ag</artifactId>
-      <version>1.2.4</version>
+      <version>1.4.1</version>
     </dependency>
     <dependency>
       <groupId>nz.ilbb.ag</groupId>
@@ -141,7 +141,7 @@
                 <artifactItem>
                   <groupId>nz.ilbb.ag</groupId>
                   <artifactId>nzilbb.ag</artifactId>
-                  <version>1.2.4-SNAPSHOT</version>
+                  <version>1.4.1</version>
                   <outputDirectory>${project.build.directory}/classes</outputDirectory>
                 </artifactItem>
                 <artifactItem>

@@ -4,19 +4,19 @@
   <parent>
     <artifactId>nzilbb.converter</artifactId>
     <groupId>nz.ilbb.ag</groupId>
-    <version>1.0.0</version>
+    <version>1.0.1</version>
   </parent>
 
   <groupId>nz.ilbb.ag</groupId>
   <artifactId>slt-to-eaf</artifactId>
   <name>nzilbb.annotator.slttoeaf</name>
-  <version>0.1.4</version>
+  <version>1.0.1</version>
   <description>SALT transcript to ELAN file converter</description>
 
   <properties>
     <input.package>nzilbb.formatter.salt</input.package>
     <input.path>nzilbb/formatter/salt/</input.path>
-    <input.version>0.3.1</input.version>
+    <input.version>0.3.2</input.version>
     
     <output.package>nzilbb.formatter.elan</output.package>
     <output.path>nzilbb/formatter/elan/</output.path>
@@ -31,7 +31,7 @@
     <dependency>
       <groupId>nz.ilbb.ag</groupId>
       <artifactId>nzilbb.ag</artifactId>
-      <version>1.2.4</version>
+      <version>1.4.1</version>
     </dependency>
     <dependency>
       <groupId>nz.ilbb.ag</groupId>
@@ -139,7 +139,7 @@
                 <artifactItem>
                   <groupId>nz.ilbb.ag</groupId>
                   <artifactId>nzilbb.ag</artifactId>
-                  <version>1.2.4-SNAPSHOT</version>
+                  <version>1.4.1</version>
                   <outputDirectory>${project.build.directory}/classes</outputDirectory>
                 </artifactItem>
                 <artifactItem>

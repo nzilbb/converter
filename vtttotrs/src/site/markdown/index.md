@@ -4,7 +4,11 @@ Converts WebVTT subtitle files to Transcriber transcripts (.trs)
 
 ## Deserializing from "WebVTT subtitles" text/vtt
 
-There are no configuration parameters for deserialization.
+Command-line configuration parameters for deserialization:
+
+|   |   |
+|:--|:--|
+| `--nonWordPattern=(\([0-9]+\.[0-9]+\))|([\p{Punct}&&[^_]])` | Regular expression to identify non-word characters for joining to a neighboring words e.g. (\([0-9]+\.[0-9]+\))|([\p{Punct}&&[^_]]) - set this blank to simply tokenize on spaces. |
 
 ## Serializing to "Transcriber transcript" text/xml-transcriber
 

@@ -1,5 +1,5 @@
 cff-version: 1.2.0
-title: nzilbb.converter
+title: nzilbb.converter - Utilities for converting between linguistic formats
 type: software
 authors:
   - given-names: Robert

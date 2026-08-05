@@ -30,34 +30,34 @@ Command-line configuration parameters for deserialization:
 
 |   |   |
 |:--|:--|
-| `--cUnitLayer=`*Layer* | Layer for marking c-units |
-| `--targetParticipantLayer=`*Layer* | Layer for marking the target participant |
-| `--commentLayer=`*Layer* | Layer for comments |
-| `--parentheticalLayer=`*Layer* | Layer for marking parenthetical remarks by the speaker |
-| `--properNameLayer=`*Layer* | Layer for tagging proper names |
-| `--repetitionsLayer=`*Layer* | Layer for annotating repetitions |
-| `--rootLayer=`*Layer* | Layer for tagging words with their root form |
-| `--errorLayer=`*Layer* | Layer for marking errors |
-| `--soundEffectLayer=`*Layer* | Layer for marking non-word verbal sound effects |
-| `--pauseLayer=`*Layer* | Layer for marking pauses in speech |
-| `--boundMorphemeLayer=`*Layer* | Layer for marking bound morpheme annotations |
-| `--mazeLayer=`*Layer* | Layer for marking false starts, repetitions, and reformulations |
-| `--partialWordLayer=`*Layer* | Layer for marking stuttered or interrupted words |
-| `--omissionLayer=`*Layer* | Layer for marking missing words |
-| `--codeLayer=`*Layer* | Layer for non-error codes |
-| `--languageLayer=`*Layer* | Layer for recording the language of the speech |
-| `--participantIdLayer=`*Layer* | Layer for recording the target participant's ID |
-| `--genderLayer=`*Layer* | Layer for recording the gender of the target participant |
-| `--dobLayer=`*Layer* | Layer for recording the birth date of the target participant |
-| `--doeLayer=`*Layer* | Layer for recording the date the recording was elicited |
-| `--caLayer=`*Layer* | Layer for recording the target participant's age when recorded |
-| `--ethnicityLayer=`*Layer* | Layer for recording the ethnicity of the target participant |
-| `--contextLayer=`*Layer* | Layer for recording the sampling context |
-| `--subgroupLayer=`*Layer* | Layer for recording the sub-group/story |
-| `--collectLayer=`*Layer* | Layer for recording the collection point of the elicitation |
-| `--locationLayer=`*Layer* | Layer for recording the location of the elicitation |
-| `--dateFormat=`*String* | Format used in SALT files for dates (e.g. Dob, Doe) - either M/d/yyyy or d/M/yyyy. NB: the default date format is inferred from your locale settings |
-| `--parseInlineConventions=`*Boolean* | Whether to use SALT in-line conventions when deserializing. If false, then only meta-data headers, comment lines, and time stamps are parsed; all in-line annotation conventions are left as-is |
+| `--cUnitLayer=cunit` | Layer for marking c-units |
+| `--targetParticipantLayer=main_participant` | Layer for marking the target participant |
+| `--commentLayer=comment` | Layer for comments |
+| `--parentheticalLayer=parenthetical` | Layer for marking parenthetical remarks by the speaker |
+| `--properNameLayer=entity` | Layer for tagging proper names |
+| `--repetitionsLayer=repetition` | Layer for annotating repetitions |
+| `--rootLayer=root` | Layer for tagging words with their root form |
+| `--errorLayer=error` | Layer for marking errors |
+| `--soundEffectLayer=sound_effects` | Layer for marking non-word verbal sound effects |
+| `--pauseLayer=pause` | Layer for marking pauses in speech |
+| `--boundMorphemeLayer=bound_morpheme` | Layer for marking bound morpheme annotations |
+| `--mazeLayer=maze` | Layer for marking false starts, repetitions, and reformulations |
+| `--partialWordLayer=partial_word` | Layer for marking stuttered or interrupted words |
+| `--omissionLayer=omission` | Layer for marking missing words |
+| `--codeLayer=code` | Layer for non-error codes |
+| `--languageLayer=transcript_language` | Layer for recording the language of the speech |
+| `--participantIdLayer=participant_id` | Layer for recording the target participant's ID |
+| `--genderLayer=participant_gender` | Layer for recording the gender of the target participant |
+| `--dobLayer=participant_dob` | Layer for recording the birth date of the target participant |
+| `--doeLayer=transcript_recording_date` | Layer for recording the date the recording was elicited |
+| `--caLayer=transcript_ca` | Layer for recording the target participant's age when recorded |
+| `--ethnicityLayer=participant_ethnicity` | Layer for recording the ethnicity of the target participant |
+| `--contextLayer=transcript_context` | Layer for recording the sampling context |
+| `--subgroupLayer=transcript_subgroup` | Layer for recording the sub-group/story |
+| `--collectLayer=transcript_collect` | Layer for recording the collection point of the elicitation |
+| `--locationLayer=transcript_location` | Layer for recording the location of the elicitation |
+| `--dateFormat=d/M/yyyy` | Format used in SALT files for dates (e.g. Dob, Doe) - either M/d/yyyy or d/M/yyyy. NB: the default date format is inferred from your locale settings |
+| `--parseInlineConventions=false` | Whether to use SALT in-line conventions when deserializing. If false, then only meta-data headers, comment lines, and time stamps are parsed; all in-line annotation conventions are left as-is |
 
 ## Serializing to "Transcriber transcript" text/xml-transcriber
 
@@ -65,21 +65,21 @@ Command-line configuration parameters for serialization:
 
 |   |   |
 |:--|:--|
-| `--topicLayer=`*Layer* | Topic tags |
-| `--commentLayer=`*Layer* | Commentary |
-| `--noiseLayer=`*Layer* | Noise annotations |
+| `--topicLayer=transcript_subgroup` | Topic tags |
+| `--commentLayer=comment` | Commentary |
+| `--noiseLayer=noise` | Noise annotations |
 | `--languageLayer=`*Layer* | Inline language tags |
-| `--lexicalLayer=`*Layer* | Lexical tags |
-| `--pronounceLayer=`*Layer* | Manual pronunciation tags |
-| `--entityLayer=`*Layer* | Named entities |
+| `--lexicalLayer=lexical` | Lexical tags |
+| `--pronounceLayer=pronounce` | Manual pronunciation tags |
+| `--entityLayer=entity` | Named entities |
 | `--scribeLayer=`*Layer* | Name of transcriber |
 | `--versionLayer=`*Layer* | Version of transcriber |
 | `--versionDateLayer=`*Layer* | Version date of transcriber |
-| `--programLayer=`*Layer* | Name of the program recorded |
-| `--airDateLayer=`*Layer* | Date the program aired |
-| `--transcriptLanguageLayer=`*Layer* | The language of the whole transcript |
+| `--programLayer=transcript_context` | Name of the program recorded |
+| `--airDateLayer=transcript_recording_date` | Date the program aired |
+| `--transcriptLanguageLayer=transcript_language` | The language of the whole transcript |
 | `--participantCheckLayer=`*Layer* | Participant checked |
-| `--genderLayer=`*Layer* | Gender - participant 'type' |
+| `--genderLayer=participant_gender` | Gender - participant 'type' |
 | `--dialectLayer=`*Layer* | Participant's dialect |
 | `--accentLayer=`*Layer* | Participant's accent |
 | `--scopeLayer=`*Layer* | Participant's 'scope' |

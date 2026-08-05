@@ -4,7 +4,11 @@ Converts WebVTT subtitle files to CLAN CHAT transcripts
 
 ## Deserializing from "WebVTT subtitles" text/vtt
 
-There are no configuration parameters for deserialization.
+Command-line configuration parameters for deserialization:
+
+|   |   |
+|:--|:--|
+| `--nonWordPattern=(\([0-9]+\.[0-9]+\))|([\p{Punct}&&[^_]])` | Regular expression to identify non-word characters for joining to a neighboring words e.g. (\([0-9]+\.[0-9]+\))|([\p{Punct}&&[^_]]) - set this blank to simply tokenize on spaces. |
 
 ## Serializing to "CLAN CHAT transcript" text/x-chat
 
@@ -13,7 +17,7 @@ Command-line configuration parameters for serialization:
 |   |   |
 |:--|:--|
 | `--cUnitLayer=`*Layer* | Layer for marking c-units |
-| `--tokenLayer=`*Layer* | Output word tokens come from this layer |
+| `--tokenLayer=word` | Output word tokens come from this layer |
 | `--disfluencyLayer=`*Layer* | Layer for disfluency annotations |
 | `--nonWordLayer=`*Layer* | Layer for non-word noises |
 | `--expansionLayer=`*Layer* | Layer for expansion annotations |
@@ -49,6 +53,6 @@ Command-line configuration parameters for serialization:
 | `--languageLayer=`*Layer* | Layer for language |
 | `--ageLayer=`*Layer* | Layer for age |
 | `--groupLayer=`*Layer* | Layer for group |
-| `--includeTimeCodes=`*Boolean* | Include utterance sychronization information when exporting transcripts |
-| `--splitMorTagGroups=`*Boolean* | Split alternative MOR taggings into separate annotations |
-| `--splitMorWordGroups=`*Boolean* | Split MOR word morphemes (clitics, components of compounds ) into separate annotations. This is only supported when Split MOR Tag Groups is also enabled. |
+| `--includeTimeCodes=true` | Include utterance sychronization information when exporting transcripts |
+| `--splitMorTagGroups=true` | Split alternative MOR taggings into separate annotations |
+| `--splitMorWordGroups=true` | Split MOR word morphemes (clitics, components of compounds ) into separate annotations. This is only supported when Split MOR Tag Groups is also enabled. |

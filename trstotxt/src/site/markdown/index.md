@@ -42,18 +42,18 @@ Command-line configuration parameters for deserialization:
 |   |   |
 |:--|:--|
 | `--topicLayer=`*Layer* | Topic tags |
-| `--commentLayer=`*Layer* | Commentary |
-| `--noiseLayer=`*Layer* | Noise annotations |
+| `--commentLayer=comment` | Commentary |
+| `--noiseLayer=noise` | Noise annotations |
 | `--languageLayer=`*Layer* | Inline language tags |
 | `--lexicalLayer=`*Layer* | Lexical tags |
 | `--pronounceLayer=`*Layer* | Manual pronunciation tags |
 | `--entityLayer=`*Layer* | Named entities |
-| `--scribeLayer=`*Layer* | Name of transcriber |
-| `--versionLayer=`*Layer* | Version of transcriber |
-| `--versionDateLayer=`*Layer* | Version date of transcriber |
-| `--programLayer=`*Layer* | Name of the program recorded |
-| `--airDateLayer=`*Layer* | Date the program aired |
-| `--transcriptLanguageLayer=`*Layer* | The language of the whole transcript |
+| `--scribeLayer=scribe` | Name of transcriber |
+| `--versionLayer=version` | Version of transcriber |
+| `--versionDateLayer=versiondate` | Version date of transcriber |
+| `--programLayer=program` | Name of the program recorded |
+| `--airDateLayer=airdate` | Date the program aired |
+| `--transcriptLanguageLayer=language` | The language of the whole transcript |
 | `--participantCheckLayer=`*Layer* | Participant checked |
 | `--genderLayer=`*Layer* | Gender - participant 'type' |
 | `--dialectLayer=`*Layer* | Participant's dialect |
@@ -66,14 +66,17 @@ Command-line configuration parameters for serialization:
 
 |   |   |
 |:--|:--|
-| `--commentLayer=`*Layer* | Commentary |
-| `--noiseLayer=`*Layer* | Background noises |
+| `--commentLayer=comment` | Commentary |
+| `--noiseLayer=noise` | Background noises |
 | `--lexicalLayer=`*Layer* | Lexical tags |
 | `--pronounceLayer=`*Layer* | Non-standard pronunciation tags |
 | `--orthographyLayer=`*Layer* | Orthography |
-| `--useConventions=`*Boolean* | Whether to use text conventions for comment, noise, lexical, and pronounce annotations |
-| `--maxParticipantLength=`*Integer* | The maximum length of a participant name |
-| `--maxHeaderLines=`*Integer* | The maximum number of lines in a meta-data header |
-| `--participantFormat=`*String* | Format for marking a change of turn within the transcript body - e.g. {0}:, where {0} is a place-holder for the participant ID/name |
-| `--metaDataFormat=`*String* | Format for a meta-data line in the header - e.g. {0}={1}, where {0} is a place-holder for the attribute name or key, and {1} is a place-holder for the attribute value |
-| `--timestampFormat=`*String* | Format for a time stamp - e.g. HH:mm:ss.SSS |
+| `--useConventions=true` | Whether to use text conventions for comment, noise, lexical, and pronounce annotations |
+| `--maxParticipantLength=20` | The maximum length of a participant name |
+| `--maxHeaderLines=50` | The maximum number of lines in a meta-data header |
+| `--participantFormat={0}: ` | Format for marking a change of turn within the transcript body - e.g. {0}:, where {0} is a place-holder for the participant ID/name |
+| `--metaDataFormat={0}={1}` | Format for a meta-data line in the header - e.g. {0}={1}, where {0} is a place-holder for the attribute name or key, and {1} is a place-holder for the attribute value |
+| `--tagFormat={0}_{1}` | Output format for tags - e.g. {0}_{1} for output like 'the_DET', where {0} is a place-holder for the word, and {1} is a place-holder for annotation label |
+| `--includeMissingTags=false` | Whether to output missing tags with Tag Format, e.g. if the word 'the' has no tag, setting this to true will output 'the_', and false will output 'the'. |
+| `--timestampFormat=HH:mm:ss.SSS` | Format for a time stamp - e.g. HH:mm:ss.SSS |
+| `--nonWordPattern=(\([0-9]+\.[0-9]+\))|([\p{Punct}&&[^_]])` | Regular expression to identify non-word characters for joining to a neighboring words e.g. (\([0-9]+\.[0-9]+\))|([\p{Punct}&&[^_]]) - set this blank to simply tokenize on spaces. |

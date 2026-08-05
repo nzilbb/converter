@@ -46,7 +46,7 @@ Command-line configuration parameters for deserialization:
 | `--airDateLayer=`*Layer* | Date the program aired |
 | `--transcriptLanguageLayer=`*Layer* | The language of the whole transcript |
 | `--participantCheckLayer=`*Layer* | Participant checked |
-| `--genderLayer=`*Layer* | Gender - participant 'type' |
+| `--genderLayer=participant_gender` | Gender - participant 'type' |
 | `--dialectLayer=`*Layer* | Participant's dialect |
 | `--accentLayer=`*Layer* | Participant's accent |
 | `--scopeLayer=`*Layer* | Participant's 'scope' |
@@ -57,8 +57,8 @@ Command-line configuration parameters for serialization:
 
 |   |   |
 |:--|:--|
-| `--orthographyLayer=`*Layer* | Orthography tags |
+| `--orthographyLayer=orthography` | Orthography tags |
 | `--pronunciationLayer=`*Layer* | Pronunciation tags |
-| `--genderLayer=`*Layer* | Participant gender |
-| `--prefixUtteranceId=`*Boolean* | Whether to prefix utterance IDs with the speaker ID or not. |
-| `--wavBasePath=`*String* | Base path to prefix all wav files names. |
+| `--genderLayer=participant_gender` | Participant gender |
+| `--prefixUtteranceId=false` | Whether to prefix utterance IDs with the speaker ID or not. |
+| `--wavBasePath=` | Base path to prefix all wav files names. |

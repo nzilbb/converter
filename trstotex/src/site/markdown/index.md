@@ -11,19 +11,19 @@ Command-line configuration parameters for deserialization:
 
 |   |   |
 |:--|:--|
-| `--topicLayer=`*Layer* | Topic tags |
+| `--topicLayer=topic` | Topic tags |
 | `--commentLayer=`*Layer* | Commentary |
-| `--noiseLayer=`*Layer* | Noise annotations |
-| `--languageLayer=`*Layer* | Inline language tags |
-| `--lexicalLayer=`*Layer* | Lexical tags |
-| `--pronounceLayer=`*Layer* | Manual pronunciation tags |
-| `--entityLayer=`*Layer* | Named entities |
-| `--scribeLayer=`*Layer* | Name of transcriber |
+| `--noiseLayer=noise` | Noise annotations |
+| `--languageLayer=language` | Inline language tags |
+| `--lexicalLayer=lexical` | Lexical tags |
+| `--pronounceLayer=pronounce` | Manual pronunciation tags |
+| `--entityLayer=entity` | Named entities |
+| `--scribeLayer=transcript_scribe` | Name of transcriber |
 | `--versionLayer=`*Layer* | Version of transcriber |
 | `--versionDateLayer=`*Layer* | Version date of transcriber |
 | `--programLayer=`*Layer* | Name of the program recorded |
-| `--airDateLayer=`*Layer* | Date the program aired |
-| `--transcriptLanguageLayer=`*Layer* | The language of the whole transcript |
+| `--airDateLayer=transcript_recording_date` | Date the program aired |
+| `--transcriptLanguageLayer=transcript_language` | The language of the whole transcript |
 | `--participantCheckLayer=`*Layer* | Participant checked |
 | `--genderLayer=`*Layer* | Gender - participant 'type' |
 | `--dialectLayer=`*Layer* | Participant's dialect |
@@ -36,9 +36,9 @@ Command-line configuration parameters for serialization:
 
 |   |   |
 |:--|:--|
-| `--noiseLayer=`*Layer* | Background noises |
+| `--noiseLayer=noise` | Background noises |
 | `--orthographyLayer=`*Layer* | Orthography |
-| `--texPreamble=`*String* | TeX code to include in the preamble, e.g. "\usepackage{lineno, blindtext}" |
-| `--texBeginTranscript=`*String* | TeX to insert before the first turn, e.g. "\begin{description}" |
-| `--texTurnCommand=`*String* | TeX command for formatting a speech turn, e.g. "\item[#1:] #2" - #1 = Speaker ID, #2 = Turn Text |
-| `--texEndTranscript=`*String* | TeX to insert after the last turn, e.g. "\end{description}" |
+| `--texPreamble=` | TeX code to include in the preamble, e.g. "\usepackage{lineno, blindtext}" |
+| `--texBeginTranscript=\begin{description}` | TeX to insert before the first turn, e.g. "\begin{description}" |
+| `--texTurnCommand=\item[#1:] #2` | TeX command for formatting a speech turn, e.g. "\item[#1:] #2" - #1 = Speaker ID, #2 = Turn Text |
+| `--texEndTranscript=\end{description}` | TeX to insert after the last turn, e.g. "\end{description}" |

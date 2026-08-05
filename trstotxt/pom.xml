@@ -4,24 +4,24 @@
   <parent>
     <artifactId>nzilbb.converter</artifactId>
     <groupId>nz.ilbb.ag</groupId>
-    <version>1.0.0</version>
+    <version>1.0.1</version>
   </parent>
 
   <groupId>nz.ilbb.ag</groupId>
   <artifactId>trs-to-txt</artifactId>
   <name>nzilbb.converter.trstotxt</name>
-  <version>1.0.2</version>
+  <version>1.0.3</version>
   <description>Transcriber transcript to plain text converter</description>
 
   <properties>
     
     <input.package>nzilbb.formatter.transcriber</input.package>
     <input.path>nzilbb/formatter/transcriber/</input.path>
-    <input.version>2.0.5</input.version>
+    <input.version>2.0.6</input.version>
     
     <output.package>nzilbb.formatter.text</output.package>
     <output.path>nzilbb/formatter/text/</output.path>
-    <output.version>1.5.1</output.version>
+    <output.version>1.7.2</output.version>
     
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <maven.compiler.source>1.8</maven.compiler.source>
@@ -42,7 +42,7 @@
     <dependency>
       <groupId>nz.ilbb.ag</groupId>
       <artifactId>nzilbb.ag</artifactId>
-      <version>1.2.4</version>
+      <version>1.4.1</version>
     </dependency>
     <dependency>
       <groupId>junit</groupId>
@@ -140,7 +140,7 @@
                 <artifactItem>
                   <groupId>nz.ilbb.ag</groupId>
                   <artifactId>nzilbb.ag</artifactId>
-                  <version>1.2.4-SNAPSHOT</version>
+                  <version>1.4.1</version>
                   <outputDirectory>${project.build.directory}/classes</outputDirectory>
                 </artifactItem>
                 <artifactItem>

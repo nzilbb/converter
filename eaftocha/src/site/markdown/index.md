@@ -19,9 +19,9 @@ Command-line configuration parameters for deserialization:
 | `--dateLayer=`*Layer* | Document date |
 | `--languageLayer=`*Layer* | The language of the whole transcript |
 | `--phraseLanguageLayer=`*Layer* | For tagging individual phrases with a language |
-| `--useConventions=`*Boolean* | Whether to use text conventions for comment, noise, lexical, and pronounce annotations |
-| `--ignoreBlankAnnotations=`*Boolean* | Whether to skip annotations with no label, or process them |
-| `--minimumTurnPauseLength=`*Double* | Minimum amount of time between two turns by the same speaker, with no intervening speaker, for which the inter-turn pause counts as a turn change boundary. If the pause is shorter than this, the turns are merged into one. |
+| `--useConventions=false` | Whether to use text conventions for comment, noise, lexical, and pronounce annotations |
+| `--ignoreBlankAnnotations=true` | Whether to skip annotations with no label, or process them |
+| `--minimumTurnPauseLength=0.0` | Minimum amount of time between two turns by the same speaker, with no intervening speaker, for which the inter-turn pause counts as a turn change boundary. If the pause is shorter than this, the turns are merged into one. |
 
 ## Serializing to "CLAN CHAT transcript" text/x-chat
 
@@ -30,7 +30,7 @@ Command-line configuration parameters for serialization:
 |   |   |
 |:--|:--|
 | `--cUnitLayer=`*Layer* | Layer for marking c-units |
-| `--tokenLayer=`*Layer* | Output word tokens come from this layer |
+| `--tokenLayer=word` | Output word tokens come from this layer |
 | `--disfluencyLayer=`*Layer* | Layer for disfluency annotations |
 | `--nonWordLayer=`*Layer* | Layer for non-word noises |
 | `--expansionLayer=`*Layer* | Layer for expansion annotations |
@@ -66,6 +66,6 @@ Command-line configuration parameters for serialization:
 | `--languageLayer=`*Layer* | Layer for language |
 | `--ageLayer=`*Layer* | Layer for age |
 | `--groupLayer=`*Layer* | Layer for group |
-| `--includeTimeCodes=`*Boolean* | Include utterance sychronization information when exporting transcripts |
-| `--splitMorTagGroups=`*Boolean* | Split alternative MOR taggings into separate annotations |
-| `--splitMorWordGroups=`*Boolean* | Split MOR word morphemes (clitics, components of compounds ) into separate annotations. This is only supported when Split MOR Tag Groups is also enabled. |
+| `--includeTimeCodes=true` | Include utterance sychronization information when exporting transcripts |
+| `--splitMorTagGroups=true` | Split alternative MOR taggings into separate annotations |
+| `--splitMorWordGroups=true` | Split MOR word morphemes (clitics, components of compounds ) into separate annotations. This is only supported when Split MOR Tag Groups is also enabled. |

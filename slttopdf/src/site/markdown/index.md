@@ -38,8 +38,8 @@ Command-line configuration parameters for deserialization:
 | `--subgroupLayer=`*Layer* | Layer for recording the sub-group/story |
 | `--collectLayer=`*Layer* | Layer for recording the collection point of the elicitation |
 | `--locationLayer=`*Layer* | Layer for recording the location of the elicitation |
-| `--dateFormat=`*String* | Format used in SALT files for dates (e.g. Dob, Doe) - either M/d/yyyy or d/M/yyyy. NB: the default date format is inferred from your locale settings |
-| `--parseInlineConventions=`*Boolean* | Whether to use SALT in-line conventions when deserializing. If false, then only meta-data headers, comment lines, and time stamps are parsed; all in-line annotation conventions are left as-is |
+| `--dateFormat=d/M/yyyy` | Format used in SALT files for dates (e.g. Dob, Doe) - either M/d/yyyy or d/M/yyyy. NB: the default date format is inferred from your locale settings |
+| `--parseInlineConventions=true` | Whether to use SALT in-line conventions when deserializing. If false, then only meta-data headers, comment lines, and time stamps are parsed; all in-line annotation conventions are left as-is |
 
 ## Serializing to "PDF Document" application/pdf
 
