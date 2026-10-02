@@ -14,7 +14,8 @@
       <name>AGPL-3.0-or-later</name>
       <comments>GNU Affero General Public License v3.0 or later</comments>
       <url>https://www.gnu.org/licenses/agpl.txt</url>
-      <distribution>manual</distribution><!-- change to repo once it's in there -->
+      <distribution>manual</distribution>
+      <!-- change to repo once it's in there -->
     </license>
   </licenses>
   <scm>
@@ -48,7 +49,6 @@
     <maven.compiler.source>1.8</maven.compiler.source>
     <maven.compiler.target>1.8</maven.compiler.target>
   </properties>
-
   <build>
     <plugins>
       <plugin>
@@ -60,14 +60,15 @@
         <version>3.9.0</version>
       </plugin>
       <plugin>
-	<artifactId>maven-javadoc-plugin</artifactId>
+        <artifactId>maven-javadoc-plugin</artifactId>
         <version>3.11.2</version>
       </plugin>
       <plugin>
         <artifactId>maven-clean-plugin</artifactId>
         <version>2.5</version>
         <executions>
-          <execution><!-- remove all old jars -->
+          <execution>
+            <!-- remove all old jars -->
             <id>remove-bin</id>
             <phase>clean</phase>
             <goals>
@@ -95,7 +96,6 @@
       </plugin>
     </plugins>
   </build>
-  
   <reporting>
     <plugins>
       <plugin>
@@ -128,8 +128,6 @@
       </plugin>
     </plugins>
   </reporting>
-
-
   <modules>
     <module>eaftotrs</module>
     <module>eaftoslt</module>
@@ -175,5 +173,6 @@
     <module>whispertoeaf</module>
     <module>whispertovtt</module>
     <module>whispertotextgrid</module>
+    <module>mlftotextgrid</module>
   </modules>
 </project>

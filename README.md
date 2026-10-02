@@ -178,7 +178,7 @@ All converters are then to be found in the `bin` subdirectory.
     <dependency>
       <groupId>nz.ilbb.ag</groupId>
       <artifactId>nzilbb.ag</artifactId>
-      <version>1.3.0</version>
+      <version>1.4.1</version>
     </dependency>
    ```
    - add the following to *build*
@@ -240,7 +240,7 @@ All converters are then to be found in the `bin` subdirectory.
               </manifestSection>
             </manifestSections>
           </archive>
-          <outputDirectory>../../bin</outputDirectory>
+          <outputDirectory>../bin</outputDirectory>
         </configuration>
       </plugin>
       <!-- include all the necessary dependencies in our jar for it to run standalone -->
@@ -292,17 +292,18 @@ All converters are then to be found in the `bin` subdirectory.
    cd informattooutformat
    rm -r src/main/java/nz src/test/java/nz
    ```
-4. Add directory structure for the annotator code:
+4. Add directory structure for the converter code:
    ```
    mkdir src/main/java/nzilbb src/main/java/nzilbb/converter src/main/resources \
      src/main/resources/nzilbb src/main/resources/nzilbb/converter \
+     src/test/java/nzilbb \
      src/test/java/nzilbb/converter src/test/resources src/test/resources/nzilbb \
      src/test/resources/nzilbb/converter src/site/ \
-     src/main/resources/nzilbbconverter src/main/resources/nzilbbconverter/images
+     src/main/resources/nzilbb/converter src/main/resources/nzilbb/converter/images
    ```
 5. Add an icon for the converter, e.g.:
    ```
    cp ../../ag/src/site/resources/images/labbcat.png \
-     src/main/resources/nzilbb/converter/InformatToOutformat.png
+     src/main/resources/nzilbb/converter/InformatToOutformat.pngo
    ```
 6. Add your implementation to\ informattooutformat/src/main/java/nzilbb/converter/InformatToOutformat.java
