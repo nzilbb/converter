@@ -22,6 +22,7 @@
 package nzilbb.converter;
 
 import javax.swing.filechooser.FileNameExtensionFilter;
+import java.util.Optional;
 import nzilbb.ag.Constants;
 import nzilbb.ag.Graph;
 import nzilbb.ag.Annotation;
@@ -70,6 +71,24 @@ public class MlfToTextGrid extends Converter {
    */
   @Switch(value="Whether to removing the leading underscore _ from segment labels",compulsory=false)
   public MlfToTextGrid setRemoveHtkSegmentPrefix(Boolean newRemoveHtkSegmentPrefix) { removeHtkSegmentPrefix = newRemoveHtkSegmentPrefix; return this; }
+  
+  /**
+   * The speaker ID to use for all utterances.
+   * @see #getSpeakerId()
+   * @see #setSpeakerId(String)
+   */
+  protected String speakerId;
+  /**
+   * Getter for {@link #speakerId}: The speaker ID to use for all utterances.
+   * @return The speaker ID to use for all utterances.
+   */
+  public String getSpeakerId() { return speakerId; }
+  /**
+   * Setter for {@link #speakerId}: The speaker ID to use for all utterances.
+   * @param newSpeakerId The speaker ID to use for all utterances.
+   */
+  @Switch(value="The speaker ID to use for all utterances",compulsory=false)
+  public MlfToTextGrid setSpeakerId(String newSpeakerId) { speakerId = newSpeakerId; return this; }
   
   public static void main(String argv[]) {
     new MlfToTextGrid().mainRun(argv);
@@ -133,7 +152,8 @@ public class MlfToTextGrid extends Converter {
     // construct utterance/turn annotations
     for (Graph transcript : transcripts) {
       transcript.commit();
-      String label = transcript.getId().replaceAll("__[0-9]+\\.[0-9]+-[0-9]+\\.[0-9]+$","");
+      String label = Optional.ofNullable(speakerId)
+        .orElse(transcript.getId().replaceAll("__[0-9]+\\.[0-9]+-[0-9]+\\.[0-9]+$",""));
       Annotation participant = transcript.createTag(
         transcript, transcript.getSchema().getParticipantLayerId(), label);
       Annotation turn = transcript.createTag(

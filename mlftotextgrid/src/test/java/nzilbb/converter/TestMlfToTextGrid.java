@@ -51,7 +51,29 @@ public class TestMlfToTextGrid {
       if (differences != null) {
         fail(differences);
       } else {
-        actual.delete();
+        //actual.delete();
+      }
+    } // next file
+  }
+  
+  @Test public void parameters() throws Exception {
+    File dir = getDir();
+    File input = new File(dir, "test.mlf");
+    MlfToTextGrid converter = new MlfToTextGrid();
+    //converter.setVerbose(true);
+    converter.setRemoveHtkSegmentPrefix(false);
+    converter.setSpeakerId("test-speaker");
+    converter.convert(input);
+    String[] fileNames = { "AP511_MikeThorpe__1.373-7.131.TextGrid",
+      "AP511_MikeThorpe__7.131-13.887.TextGrid"};
+    for (String fileName : fileNames) {
+      File actual = new File(dir, fileName);
+      File expected = new File(dir, "expected_p_"+fileName);
+      String differences = diff(expected, actual);
+      if (differences != null) {
+        fail(differences);
+      } else {
+        //actual.delete();
       }
     } // next file
   }
